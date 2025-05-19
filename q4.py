@@ -76,4 +76,4 @@ diasDataFinal += diaFinal
 
 diferenca = diasDataFinal - diasDataInicial # Vai eliminar os dias até a data inicial para que possa ser mostrado no terminal
 
-print('A diferença de dias foi de: ', diferenca)
+print('A diferença de dias foi de: ', diferenca, ' dias.')
