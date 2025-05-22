@@ -21,7 +21,6 @@ mesInicial = int(input('Defina o mês inicial: '))
 if 1 <= mesInicial <= 12:
     if mesInicial == 1:
         mes = 'janeiro'
-    
     if mesInicial == 2:
         mes = 'fevereiro'    
     if mesInicial == 3:
@@ -49,7 +48,7 @@ if 1 <= mesInicial <= 12:
 
 
     diaInicial = int(input('Defina o dia inicial: '))
-    mensagemDeErro = ('Dia', diaInicial,' de ', mes, ' não existe.')
+    mensagemDeErro = 'Dia', diaInicial,' de ', mes, ' não existe.'
 
     if mes == 'janeiro':#1
         if 1 > diaInicial or diaInicial > 31:
@@ -131,7 +130,7 @@ if 1 <= mesInicial <= 12:
                 mes = 'dezembro'
 
             diaFinal = int(input('Defina o dia final: '))
-            mensagemDeErro = ('Dia', diaFinal,' de ', mes, ' não existe.')
+            mensagemDeErro = 'Dia', diaFinal,' de ', mes, ' não existe.'
 
             if mes == 'janeiro':#1
                 if 1 > diaFinal or diaFinal > 31:
