@@ -53,53 +53,53 @@ if 1 <= mesInicial <= 12:
 
     if mes == 'janeiro':#1
         if 1 > diaInicial or diaInicial > 31:
-            mensagemDeErro
+            print(mensagemDeErro)
             bloqueioInicial += 1
     if mes == 'fevereiro':#2
         if 1 > diaInicial or diaInicial > 28:
-            mensagemDeErro
+            print(mensagemDeErro)
             bloqueioInicial += 1
     if mes == 'março':#3
         if 1 > diaInicial or diaInicial > 31:
-            mensagemDeErro
+            print(mensagemDeErro)
             bloqueioInicial += 1
     if mes == 'abril':#4
         if 1 > diaInicial or diaInicial > 30:
-            mensagemDeErro
+            print(mensagemDeErro)
             bloqueioInicial += 1
     if mes == 'maio':#5
         if 1 > diaInicial or diaInicial > 31:
-            mensagemDeErro
+            print(mensagemDeErro)
             bloqueioInicial += 1
     if mes == 'junho':#6
         if 1 > diaInicial or diaInicial > 31:
-            mensagemDeErro
+            print(mensagemDeErro)
             bloqueioInicial += 1
     if mes == 'julho':#7
         if 1 > diaInicial or diaInicial > 31:
-            mensagemDeErro
+            print(mensagemDeErro)
             bloqueioInicial += 1
     if mes == 'agosto':#8
         if 1 > diaInicial or diaInicial > 31:
-            mensagemDeErro
+            print(mensagemDeErro)
             bloqueioInicial += 1
     if mes == 'setembro':#9
         if 1 > diaInicial or diaInicial > 31:
-            mensagemDeErro
+            print(mensagemDeErro)
             bloqueioInicial += 1
     if mes == 'outubro':#10
         if 1 > diaInicial or diaInicial > 31:
-            mensagemDeErro
+            print(mensagemDeErro)
             bloqueioInicial += 1
     if mes == 'novembro':#11
         if 1 > diaInicial or diaInicial > 31:
-            mensagemDeErro
+            print(mensagemDeErro)
             bloqueioInicial += 1
 
     if mes == 'dezembro':#12
         if 1 > diaInicial or diaInicial > 31:
-            mensagemDeErro
-        bloqueioInicial += 1
+            print(mensagemDeErro)
+            bloqueioInicial += 1
 
 
     if bloqueioInicial == 0:
@@ -135,43 +135,118 @@ if 1 <= mesInicial <= 12:
 
             if mes == 'janeiro':#1
                 if 1 > diaFinal or diaFinal > 31:
-                    mensagemDeErro
+                    print(mensagemDeErro)
             if mes == 'fevereiro':#2
                 if 1 > diaFinal or diaFinal > 28:
-                    mensagemDeErro
-                    mensagemDeErro = True
+                    print(mensagemDeErro)
             if mes == 'março':#3
                 if 1 > diaFinal or diaFinal > 31:
-                    mensagemDeErro
+                    print(mensagemDeErro)
             if mes == 'abril':#4
                 if 1 > diaFinal or diaFinal > 30:
-                    mensagemDeErro
+                    print(mensagemDeErro)
             if mes == 'maio':#5
                 if 1 > diaFinal or diaFinal > 31:
-                    mensagemDeErro
+                    print(mensagemDeErro)
             if mes == 'junho':#6
                 if 1 > diaFinal or diaFinal > 31:
-                    mensagemDeErro
+                    print(mensagemDeErro)
             if mes == 'julho':#7
                 if 1 > diaFinal or diaFinal > 31:
-                    mensagemDeErro
-                    mensagemDeErro = True
+                    print(mensagemDeErro)
             if mes == 'agosto':#8
                 if 1 > diaFinal or diaFinal > 31:
-                    mensagemDeErro
+                    print(mensagemDeErro)
             if mes == 'setembro':#9
                 if 1 > diaFinal or diaFinal > 31:
-                    mensagemDeErro
+                    print(mensagemDeErro)
             if mes == 'outubro':#10
                 if 1 > diaFinal or diaFinal > 31:
-                    mensagemDeErro
+                    print(mensagemDeErro)
             if mes == 'novembro':#11
                 if 1 > diaFinal or diaFinal > 31:
-                    mensagemDeErro
+                    print(mensagemDeErro)
             if mes == 'dezembro':#12
                 if 1 > diaFinal or diaFinal > 31:
-                    mensagemDeErro
+                    print(mensagemDeErro)
+
+                if mesInicial <= mesFinal:
+
+                    diasDataInicial = 0 # Quantidade total de dias que se passaram desde o início do ano até a data inicial
+
+                    if mesInicial > 1:
+                        diasDataInicial += jan
+                    if mesInicial > 2:
+                        diasDataInicial += fev
+                    if mesInicial > 3:
+                        diasDataInicial += mar
+                    if mesInicial > 4:
+                        diasDataInicial += abr
+                    if mesInicial > 5:
+                        diasDataInicial += mai
+                    if mesInicial > 6:
+                        diasDataInicial += jun
+                    if mesInicial > 7:
+                        diasDataInicial += jul
+                    if mesInicial > 8:
+                        diasDataInicial += ago
+                    if mesInicial > 9:
+                        diasDataInicial += set
+                    if mesInicial > 10:
+                        diasDataInicial += out
+                    if mesInicial > 11:
+                        diasDataInicial += nov
+                    if mesInicial > 12:
+                        diasDataInicial += dez
+
+                    diasDataInicial += diaInicial
+
+                    diasDataFinal = 0 # Quantidade total de dias que se passaram desde o início do ano até a data final
+
+                    if mesFinal > 1:
+                        diasDataFinal += jan
+                    if mesFinal > 2:
+                        diasDataFinal += fev
+                    if mesFinal > 3:
+                        diasDataFinal += mar
+                    if mesFinal > 4:
+                        diasDataFinal += abr
+                    if mesFinal > 5:
+                        diasDataFinal += mai
+                    if mesFinal > 6:
+                        diasDataFinal += jun
+                    if mesFinal > 7:
+                        diasDataFinal += jul
+                    if mesFinal > 8:
+                        diasDataFinal += ago
+                    if mesFinal > 9:
+                        diasDataFinal += set
+                    if mesFinal > 10:
+                        diasDataFinal += out
+                    if mesFinal > 11:
+                        diasDataFinal += nov
+                    if mesFinal > 12:
+                        diasDataFinal += dez
+                    diasDataFinal += diaFinal
+
+                    diferenca = diasDataFinal - diasDataInicial # Vai eliminar os dias até a data inicial para que possa ser mostrado no terminal
+
+                    if diferenca > 1: # Só pra corrigir um erro de sintaxe (plural e singular)
+                        print('A diferença de dias foi de: ', diferenca, ' dias.')
+                    else:
+                        print('A diferença de dias foi de: ', diferenca, ' dia.')
 
 
+
+
+
+
+
+
+
+
+
+
+                else: print('Os meses precisam ser maiores ou iguais. Isto não é uma máquina do tempo.')
         else: print('Mês inválido. Digite um mês entre 1 e 12.')
 else: print('Mês inválido. Digite um mês entre 1 e 12.')
