@@ -9,8 +9,10 @@ else:
 # (milhar, dezena, centena e unidade)
 # o nCompleto será reduzido até virar apenas a unidade
 
-#if  9999<= nCompleto <= 9999:
+# Se o número for negativo, será transformado em positivo para a soma dos ALGARÍSMOS
 
+    if nCompleto < 0
+        nCompleto = nCompleto *(-1)
     milhar = nCompleto//1000                    # 1234//1000 = 1
     print(milhar)
     nCompleto = nCompleto - milhar*1000         # 1234 - 1000 =  234
