@@ -1,150 +1,177 @@
 # Dias do mês (calendário 2025)
 
-
-#janeiro = 1
 jan = 31
-
-#fevereiro = 2
 fev = 28
-
-#março = 3
 mar = 31
-
-#abril = 4
 abr = 30
-
-#maio = 5
 mai = 31
-
-#junho = 6
 jun = 30
-
-#julho = 7
 jul = 31
-
-#agosto = 8
 ago = 31
-
-#setembro = 9
 set = 30
-
-#outubro = 10
 out = 31
-
-#novembro = 11
 nov = 30
-
-#dezembro = 12
 dez = 31
 
-# Aqui vai receber o mês, conferir se é valido (1 até 12)
-# Depois vai receber a data e validar de acordo com o mês
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+bloqueioInicial = 0 # Uma chave para bloquear o programa de entrar na parte final se a inicial não for cumprida
 mesInicial = int(input('Defina o mês inicial: '))
 
 # Aqui valida o mês e atribui o nome (para a mensagem de data inválida)
 if 1 <= mesInicial <= 12:
     if mesInicial == 1:
-        mesErrado = 'janeiro'
+        mes = 'janeiro'
+    
     if mesInicial == 2:
-        mesErrado = 'fevereiro'    
+        mes = 'fevereiro'    
     if mesInicial == 3:
-        mesErrado = 'março'
+        mes = 'março'
     if mesInicial == 4:
-        mesErrado = 'abril'
+        mes = 'abril'
     if mesInicial == 5:
-        mesErrado = 'maio'
+        mes = 'maio'
     if mesInicial == 6:
-        mesErrado = 'junho'
+        mes = 'junho'
     if mesInicial == 7:
-        mesErrado = 'julho'
+        mes = 'julho'
     if mesInicial == 8:
-        mesErrado = 'agosto'
+        mes = 'agosto'
     if mesInicial == 9:
-        mesErrado = 'setembro'
+        mes = 'setembro'
     if mesInicial == 10:
-        mesErrado = 'outubro'
+        mes = 'outubro'
     if mesInicial == 11:
-        mesErrado = 'novembro'
+        mes = 'novembro'
     if mesInicial == 12:
-        mesErrado = 'dezembro'
+        mes = 'dezembro'
+
 
 
 
     diaInicial = int(input('Defina o dia inicial: '))
-    if 1 <= diaInicial <= 31:
-        
-        mesFinal   = int(input('Defina o mês final: '))
+    mensagemDeErro = ('Dia', diaInicial,' de ', mes, ' não existe.')
+
+    if mes == 'janeiro':#1
+        if 1 > diaInicial or diaInicial > 31:
+            mensagemDeErro
+            bloqueioInicial += 1
+    if mes == 'fevereiro':#2
+        if 1 > diaInicial or diaInicial > 28:
+            mensagemDeErro
+            bloqueioInicial += 1
+    if mes == 'março':#3
+        if 1 > diaInicial or diaInicial > 31:
+            mensagemDeErro
+            bloqueioInicial += 1
+    if mes == 'abril':#4
+        if 1 > diaInicial or diaInicial > 30:
+            mensagemDeErro
+            bloqueioInicial += 1
+    if mes == 'maio':#5
+        if 1 > diaInicial or diaInicial > 31:
+            mensagemDeErro
+            bloqueioInicial += 1
+    if mes == 'junho':#6
+        if 1 > diaInicial or diaInicial > 31:
+            mensagemDeErro
+            bloqueioInicial += 1
+    if mes == 'julho':#7
+        if 1 > diaInicial or diaInicial > 31:
+            mensagemDeErro
+            bloqueioInicial += 1
+    if mes == 'agosto':#8
+        if 1 > diaInicial or diaInicial > 31:
+            mensagemDeErro
+            bloqueioInicial += 1
+    if mes == 'setembro':#9
+        if 1 > diaInicial or diaInicial > 31:
+            mensagemDeErro
+            bloqueioInicial += 1
+    if mes == 'outubro':#10
+        if 1 > diaInicial or diaInicial > 31:
+            mensagemDeErro
+            bloqueioInicial += 1
+    if mes == 'novembro':#11
+        if 1 > diaInicial or diaInicial > 31:
+            mensagemDeErro
+            bloqueioInicial += 1
+
+    if mes == 'dezembro':#12
+        if 1 > diaInicial or diaInicial > 31:
+            mensagemDeErro
+        bloqueioInicial += 1
+
+
+    if bloqueioInicial == 0:
+        mesFinal = int(input('Digite o mês final: '))
         if 1 <= mesFinal <= 12:
             if mesFinal == 1:
-                mesErrado = 'janeiro'
+                mes = 'janeiro'           
             if mesFinal == 2:
-                mesErrado = 'fevereiro'    
+                mes = 'fevereiro'    
             if mesFinal == 3:
-                mesErrado = 'março'
+                mes = 'março'
             if mesFinal == 4:
-                mesErrado = 'abril'
+                mes = 'abril'
             if mesFinal == 5:
-                mesErrado = 'maio'
+                mes = 'maio'
             if mesFinal == 6:
-                mesErrado = 'junho'
+                mes = 'junho'
             if mesFinal == 7:
-                mesErrado = 'julho'
+                mes = 'julho'
             if mesFinal == 8:
-                mesErrado = 'agosto'
+                mes = 'agosto'
             if mesFinal == 9:
-                mesErrado = 'setembro'
+                mes = 'setembro'
             if mesFinal == 10:
-                mesErrado = 'outubro'
+                mes = 'outubro'
             if mesFinal == 11:
-                mesErrado = 'novembro'
+                mes = 'novembro'
             if mesFinal == 12:
-                mesErrado = 'dezembro'
+                mes = 'dezembro'
 
-            diaFinal   = int(input('Defina o dia final: '))
-            if 1 >= diaFinal <= 31:
-                print('holder')
+            diaFinal = int(input('Defina o dia final: '))
+            mensagemDeErro = ('Dia', diaFinal,' de ', mes, ' não existe.')
+
+            if mes == 'janeiro':#1
+                if 1 > diaFinal or diaFinal > 31:
+                    mensagemDeErro
+            if mes == 'fevereiro':#2
+                if 1 > diaFinal or diaFinal > 28:
+                    mensagemDeErro
+                    mensagemDeErro = True
+            if mes == 'março':#3
+                if 1 > diaFinal or diaFinal > 31:
+                    mensagemDeErro
+            if mes == 'abril':#4
+                if 1 > diaFinal or diaFinal > 30:
+                    mensagemDeErro
+            if mes == 'maio':#5
+                if 1 > diaFinal or diaFinal > 31:
+                    mensagemDeErro
+            if mes == 'junho':#6
+                if 1 > diaFinal or diaFinal > 31:
+                    mensagemDeErro
+            if mes == 'julho':#7
+                if 1 > diaFinal or diaFinal > 31:
+                    mensagemDeErro
+                    mensagemDeErro = True
+            if mes == 'agosto':#8
+                if 1 > diaFinal or diaFinal > 31:
+                    mensagemDeErro
+            if mes == 'setembro':#9
+                if 1 > diaFinal or diaFinal > 31:
+                    mensagemDeErro
+            if mes == 'outubro':#10
+                if 1 > diaFinal or diaFinal > 31:
+                    mensagemDeErro
+            if mes == 'novembro':#11
+                if 1 > diaFinal or diaFinal > 31:
+                    mensagemDeErro
+            if mes == 'dezembro':#12
+                if 1 > diaFinal or diaFinal > 31:
+                    mensagemDeErro
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                
-            else: print('Dia ',diaFinal,' de ', mesErrado, ' não é uma data válida.' )
-        else: print('Mês inválido. Digite um mês entre 1 e 12.' )
-    else: print('Dia ',diaInicial,' de ', mesErrado, ' não é uma data válida.' )
+        else: print('Mês inválido. Digite um mês entre 1 e 12.')
 else: print('Mês inválido. Digite um mês entre 1 e 12.')
