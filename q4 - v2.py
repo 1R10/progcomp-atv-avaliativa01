@@ -1,4 +1,4 @@
-# Dias do mês (calendário 2025)
+# Quantidade de dias por mês (calendário 2025)
 
 jan = 31
 fev = 28
@@ -45,10 +45,10 @@ if 1 <= mesInicial <= 12:
         mes = 'dezembro'
 
 
-
+# Parte do dia e mês inicial ---------------------------------------------------------------------------------------------------------------------------------------------------
 
     diaInicial = int(input('Defina o dia inicial: '))
-    mensagemDeErro = 'Dia', diaInicial,' de ', mes, ' não existe.'
+    mensagemDeErro = 'Dia ' + str(diaInicial) +' de ' + mes + ' não existe.'
 
     if mes == 'janeiro':#1
         if 1 > diaInicial or diaInicial > 31:
@@ -71,7 +71,7 @@ if 1 <= mesInicial <= 12:
             print(mensagemDeErro)
             bloqueioInicial += 1
     if mes == 'junho':#6
-        if 1 > diaInicial or diaInicial > 31:
+        if 1 > diaInicial or diaInicial > 30:
             print(mensagemDeErro)
             bloqueioInicial += 1
     if mes == 'julho':#7
@@ -83,7 +83,7 @@ if 1 <= mesInicial <= 12:
             print(mensagemDeErro)
             bloqueioInicial += 1
     if mes == 'setembro':#9
-        if 1 > diaInicial or diaInicial > 31:
+        if 1 > diaInicial or diaInicial > 30:
             print(mensagemDeErro)
             bloqueioInicial += 1
     if mes == 'outubro':#10
@@ -91,7 +91,7 @@ if 1 <= mesInicial <= 12:
             print(mensagemDeErro)
             bloqueioInicial += 1
     if mes == 'novembro':#11
-        if 1 > diaInicial or diaInicial > 31:
+        if 1 > diaInicial or diaInicial > 30:
             print(mensagemDeErro)
             bloqueioInicial += 1
 
@@ -99,8 +99,10 @@ if 1 <= mesInicial <= 12:
         if 1 > diaInicial or diaInicial > 31:
             print(mensagemDeErro)
             bloqueioInicial += 1
+        #O bloqueio é para não deixar o código avançar se estiver errado
 
 
+# Parte do dia e mês final -----------------------------------------------------------------------------------------------------------------------------------------------
     if bloqueioInicial == 0:
         mesFinal = int(input('Digite o mês final: '))
         if 1 <= mesFinal <= 12:
@@ -130,7 +132,7 @@ if 1 <= mesInicial <= 12:
                 mes = 'dezembro'
 
             diaFinal = int(input('Defina o dia final: '))
-            mensagemDeErro = 'Dia', diaFinal,' de ', mes, ' não existe.'
+            mensagemDeErro = 'Dia ' + str(diaFinal) + ' de ' + mes + ' não existe.' # Apenas substituindo o inicial pelo final
 
             if mes == 'janeiro':#1
                 if 1 > diaFinal or diaFinal > 31:
@@ -148,7 +150,7 @@ if 1 <= mesInicial <= 12:
                 if 1 > diaFinal or diaFinal > 31:
                     print(mensagemDeErro)
             if mes == 'junho':#6
-                if 1 > diaFinal or diaFinal > 31:
+                if 1 > diaFinal or diaFinal > 30:
                     print(mensagemDeErro)
             if mes == 'julho':#7
                 if 1 > diaFinal or diaFinal > 31:
@@ -157,95 +159,86 @@ if 1 <= mesInicial <= 12:
                 if 1 > diaFinal or diaFinal > 31:
                     print(mensagemDeErro)
             if mes == 'setembro':#9
-                if 1 > diaFinal or diaFinal > 31:
+                if 1 > diaFinal or diaFinal > 30:
                     print(mensagemDeErro)
             if mes == 'outubro':#10
                 if 1 > diaFinal or diaFinal > 31:
                     print(mensagemDeErro)
             if mes == 'novembro':#11
-                if 1 > diaFinal or diaFinal > 31:
+                if 1 > diaFinal or diaFinal > 30:
                     print(mensagemDeErro)
             if mes == 'dezembro':#12
                 if 1 > diaFinal or diaFinal > 31:
                     print(mensagemDeErro)
 
-                if mesInicial <= mesFinal:
+            if (mesFinal > mesInicial) or (mesFinal == mesInicial and diaFinal >= diaInicial):
 
-                    diasDataInicial = 0 # Quantidade total de dias que se passaram desde o início do ano até a data inicial
+# Cálculo dos dias---------------------------------------------------------------------------------------------------------------------------------------------
 
-                    if mesInicial > 1:
-                        diasDataInicial += jan
-                    if mesInicial > 2:
-                        diasDataInicial += fev
-                    if mesInicial > 3:
-                        diasDataInicial += mar
-                    if mesInicial > 4:
-                        diasDataInicial += abr
-                    if mesInicial > 5:
-                        diasDataInicial += mai
-                    if mesInicial > 6:
-                        diasDataInicial += jun
-                    if mesInicial > 7:
-                        diasDataInicial += jul
-                    if mesInicial > 8:
-                        diasDataInicial += ago
-                    if mesInicial > 9:
-                        diasDataInicial += set
-                    if mesInicial > 10:
-                        diasDataInicial += out
-                    if mesInicial > 11:
-                        diasDataInicial += nov
-                    if mesInicial > 12:
-                        diasDataInicial += dez
+                diasDataInicial = 0 # Quantidade total de dias que se passaram desde o início do ano até a data inicial
 
-                    diasDataInicial += diaInicial
+                if mesInicial > 1:
+                    diasDataInicial += jan
+                if mesInicial > 2:
+                    diasDataInicial += fev
+                if mesInicial > 3:
+                    diasDataInicial += mar
+                if mesInicial > 4:
+                    diasDataInicial += abr
+                if mesInicial > 5:
+                    diasDataInicial += mai
+                if mesInicial > 6:
+                    diasDataInicial += jun
+                if mesInicial > 7:
+                    diasDataInicial += jul
+                if mesInicial > 8:
+                    diasDataInicial += ago
+                if mesInicial > 9:
+                    diasDataInicial += set
+                if mesInicial > 10:
+                    diasDataInicial += out
+                if mesInicial > 11:
+                    diasDataInicial += nov
+                if mesInicial > 12:
+                    diasDataInicial += dez
 
-                    diasDataFinal = 0 # Quantidade total de dias que se passaram desde o início do ano até a data final
+                diasDataInicial += diaInicial
 
-                    if mesFinal > 1:
-                        diasDataFinal += jan
-                    if mesFinal > 2:
-                        diasDataFinal += fev
-                    if mesFinal > 3:
-                        diasDataFinal += mar
-                    if mesFinal > 4:
-                        diasDataFinal += abr
-                    if mesFinal > 5:
-                        diasDataFinal += mai
-                    if mesFinal > 6:
-                        diasDataFinal += jun
-                    if mesFinal > 7:
-                        diasDataFinal += jul
-                    if mesFinal > 8:
-                        diasDataFinal += ago
-                    if mesFinal > 9:
-                        diasDataFinal += set
-                    if mesFinal > 10:
-                        diasDataFinal += out
-                    if mesFinal > 11:
-                        diasDataFinal += nov
-                    if mesFinal > 12:
-                        diasDataFinal += dez
-                    diasDataFinal += diaFinal
+                diasDataFinal = 0 # Quantidade total de dias que se passaram desde o início do ano até a data final
 
-                    diferenca = diasDataFinal - diasDataInicial # Vai eliminar os dias até a data inicial para que possa ser mostrado no terminal
+                if mesFinal > 1:
+                    diasDataFinal += jan
+                if mesFinal > 2:
+                    diasDataFinal += fev
+                if mesFinal > 3:
+                    diasDataFinal += mar
+                if mesFinal > 4:
+                    diasDataFinal += abr
+                if mesFinal > 5:
+                    diasDataFinal += mai
+                if mesFinal > 6:
+                    diasDataFinal += jun
+                if mesFinal > 7:
+                    diasDataFinal += jul
+                if mesFinal > 8:
+                    diasDataFinal += ago
+                if mesFinal > 9:
+                    diasDataFinal += set
+                if mesFinal > 10:
+                    diasDataFinal += out
+                if mesFinal > 11:
+                    diasDataFinal += nov
+                diasDataFinal += diaFinal
 
-                    if diferenca > 1: # Só pra corrigir um erro de sintaxe (plural e singular)
-                        print('A diferença de dias foi de: ', diferenca, ' dias.')
-                    else:
-                        print('A diferença de dias foi de: ', diferenca, ' dia.')
+                diferenca = diasDataFinal - diasDataInicial # Vai eliminar os dias até a data inicial para que possa ser mostrado no terminal
 
+                if diferenca > 1: # Só pra corrigir um erro de sintaxe (plural e singular)
+                    print('A diferença de dias foi de: ', diferenca, ' dias.')
+                    
+                else: print('A diferença de dias foi de: ', diferenca, ' dia.')
 
+            else: print('Esse programa não é uma máquina do tempo. A data final não pode ser menor que a inicial.')
 
-
-
-
-
-
-
-
-
-
-                else: print('Os meses precisam ser maiores ou iguais. Isto não é uma máquina do tempo.')
         else: print('Mês inválido. Digite um mês entre 1 e 12.')
+
 else: print('Mês inválido. Digite um mês entre 1 e 12.')
