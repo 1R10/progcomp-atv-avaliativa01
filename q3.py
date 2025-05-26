@@ -3,12 +3,20 @@ from random import randint
 nSorteado = randint(1,100)
 intervalo1 = 1  # Separando os intervalos que eventualmente vão ser utilizados
 intervalo2 = 100
-tentativa1 = int(input('A máquina sorteia um número entre 1 e 100. Advinhe qual número foi sorteado: '))
-#print(intervalo1 , intervalo2)
+
+print('') # Não sei se posso usar \nprint('')
+print('A máquina vai escolher um número aleatóriamente, de 1-100, e você terá que advinhar qual é.')
+print('Em caso de erro, a máquina vai reduzir o intervalo para você ter mais chances de acertar (O número permanece o mesmo, é só uma dica)')
+print('Se quiser encerrar o programa, e ver o número sorteado, coloque um número fora do intervalo dado.')
+print('Ex: O número está entre 1 e 10: Você coloca 11 pra encerrar')
+print('')
+print('')
+tentativa1 = int(input('Advinhe o número: '))
+
 
 if 0 < tentativa1 <= 100: # O código só vai rodar se a primeira pergunta for entre o intervalo 1 e 2. Basicamente o código vai ser um loop disso por 4 vezes
     if tentativa1 == nSorteado:
-        print('Parabéns, você acertou!')
+        print('Parabéns, você acertou! O número era ')
     else: # Vai trocar o intervalo mais próximo do número sorteado pela tentativa
         if tentativa1 > nSorteado:
             intervalo2 = tentativa1
@@ -21,7 +29,7 @@ if 0 < tentativa1 <= 100: # O código só vai rodar se a primeira pergunta for e
 
         if intervalo1 < tentativa2 < intervalo2:
             if tentativa2 == nSorteado:
-                print('Parabéns, você acertou!')
+                print('Parabéns, você acertou! O número era ')
             else:
                 if tentativa2 > nSorteado:
                     intervalo2 = tentativa2
@@ -33,7 +41,7 @@ if 0 < tentativa1 <= 100: # O código só vai rodar se a primeira pergunta for e
                 tentativa3 = int(input('Terceira tentativa: '))
                 if intervalo1 < tentativa3 < intervalo2:
                     if tentativa3 == nSorteado:
-                        print('Parabéns, você acertou!')
+                        print('Parabéns, você acertou! O número era ')
                     else:
                         if tentativa3 > nSorteado:
                             intervalo2 = tentativa3
@@ -44,7 +52,7 @@ if 0 < tentativa1 <= 100: # O código só vai rodar se a primeira pergunta for e
                         tentativa4 = int(input('Quarta e última tentativa: '))
                         if intervalo1 < tentativa4 < intervalo2:
                             if tentativa4 == nSorteado:
-                                print('Parabéns, você acertou!')
+                                print('Parabéns, você acertou! O número era ')
                             else:
                                 print('Não foi dessa vez. Boa sorte na próxima!')
                         else:
